@@ -1,0 +1,106 @@
+
+/*星星样式*/
+.content{
+    width:500px;
+    margin:0 auto;
+    padding-top:0px;
+}
+
+.block{
+    width:100%;
+    margin:0 0 20px 0;
+    padding-top:10px;
+    padding-left:50px;
+    line-height:21px;
+}
+.block .star_score{
+    float:left;
+}
+.star_list{
+    height:21px;
+    margin:50px;
+    line-height:21px;
+}
+.block p,.block .attitude{
+    padding-left:20px;
+    line-height:21px;
+    display:inline-block;
+}
+.block p span{
+    color:#C00;
+    font-size:16px;
+    font-family:Georgia, "Times New Roman", Times, serif;
+}
+
+.star_score {
+    background:url(../images/star/stark2.png);
+    width:160px;
+    height:21px;
+    position:relative;
+}
+
+.star_score a{
+    height:21px;
+    display:block;
+    text-indent:-999em;
+    position:absolute;
+    left:0;
+}
+
+.star_score a:hover{
+    background:url(../images/star/stars2.png);
+    left:0;
+}
+
+.star_score a.clibg{
+    background:url(../images/star/stars2.png);
+    left:0;
+}
+
+#starttwo .star_score {
+    background:url(../images/star/starky.png);
+}
+
+#starttwo .star_score a:hover{
+    background:url(../images/star/starsy.png);
+    left:0;
+}
+
+#starttwo .star_score a.clibg{
+    background:url(../images/star/starsy.png);
+    left:0;
+}
+
+/*星星样式*/
+
+.show_number{
+    padding-left:0px;
+    padding-top:0px;
+}
+
+.show_number li{
+    width:300px;
+    border:0px solid #ccc;
+    padding:1px;
+    margin-right:1px;
+    margin-bottom:1px;
+}
+
+.atar_Show{
+    background:url(../images/star/stark2.png);
+    width:160px; height:20px;
+    position:relative;
+    float:left;
+}
+
+.atar_Show p{
+    background:url(../images/star/stars2.png);
+    left:1px;
+    height:20px;  width:134px;
+}
+
+
+.show_number li span{
+    display:inline-block;
+    line-height:1px;
+}
