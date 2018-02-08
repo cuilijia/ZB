@@ -130,5 +130,22 @@ jQuery(function ($) {
 		$(this).closest('li').addClass('link-active');
 	});
 // script end
+
+     $("#loginsubmit").click(function(){
+         alert("1");alert("2");
+        $.post( "http://193.112.18.21:8080/login",
+                 {
+                     Username:"CUILIJIAy",
+                     Password:"CUILIJIAy"
+                 },
+                 function(data){
+                     alert("数据: \n" + data);
+                 }
+              );
+         alert("4");
+         alert("5");
+         var sessionID=$.cookie('FaygosessionID');
+         alert("6"+sessionID);
+     });
 });
 
