@@ -140,14 +140,14 @@
                     <div class="row clearfix">
                         <div class="col-md-6 column">
                             <div class="item-info">
-                                <div class="col-sm-3">
+                                <div class="col-sm-3 col-md-3 column">
                                     <div class="item-image-box" style="float: right">
                                         <div class="item-image" id="Compare1_IMG">
 
                                         </div><!-- item-image -->
                                     </div>
                                 </div>
-                                <div class="col-sm-8  ">
+                                <div class="col-sm-8 col-md-8 column ">
                                     <div class="ad-info">
                                         <span id="Compare1_CompanyName"><span id="Compare1_ProductName"><a href="#" class="title">  </a></span> | <a href="#">  </a></span>
                                         <div class="ad-meta">
@@ -157,21 +157,21 @@
                                         </div><!-- ad-meta -->
                                     </div><!-- ad-info -->
                                 </div>
-                                <div class="col-sm-1 ">
+                                <div class="col-sm-1 col-md-1 column">
 
                                 </div>
                             </div><!-- item-info -->
                         </div>
                         <div class="col-md-6 column">
                             <div class="item-info">
-                                <div class="col-sm-3">
+                                <div class="col-sm-3 col-md-3 column">
                                     <div class="item-image-box" style="float: right">
                                         <div class="item-image" id="Compare2_IMG">
 
                                         </div><!-- item-image -->
                                     </div>
                                 </div>
-                                <div class="col-sm-8  ">
+                                <div class="col-sm-8  col-md-8 column">
                                     <div class="ad-info">
                                         <span id="Compare2_CompanyName"><span id="Compare2_ProductName"><a href="#" class="title">  </a></span> | <a href="#">  </a></span>
                                         <div class="ad-meta">
@@ -181,7 +181,7 @@
                                         </div><!-- ad-meta -->
                                     </div><!-- ad-info -->
                                 </div>
-                                <div class="col-sm-1 ">
+                                <div class="col-sm-1 col-md-1 column">
 
                                 </div>
                             </div><!-- item-info -->
@@ -198,20 +198,22 @@
                         <div class="row clearfix">
                             <div class="col-md-12 column">
                                 <div class="row clearfix">
-                                    <div class="col-md-6 column">
+                                    <div class="col-md-1 column"></div>
+                                    <div class="col-md-5 column">
                                         <div class="section job-short-info">
                                             <div class="well-lg" id="Compare1_ProductRadar" >
 
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 column">
+                                    <div class="col-md-5 column">
                                         <div class="section job-short-info">
                                             <div class="well-lg" id="Compare1_ProductRadarUser" >
 
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-1 column"></div>
                                 </div>
                                 <div class="row clearfix">
                                     <div class="col-md-6 column">
@@ -229,43 +231,52 @@
 
                     <div class="container">
                         <div class="row clearfix">
-                            <div class="col-md-12 column">
+                            <div class="col-md-1 column">
+                            </div>
+                            <div class="col-md-10 column">
                                 <div id="myAlert" class="alert alert-warning">
                                     <a href="#" class="close" data-dismiss="alert">&times;</a>
                                     <strong>有不明白的细节？</strong><a href="#">来看看专家的评价逻辑的说明吧。</a>
                                 </div>
                                 <div class="panel-group" id="accordion1">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        <tr class="active">
+                                            <th><span id="Compare1_ProductName2"> </span></th>
+                                            <th>VS</th>
+                                            <th ><span id="Compare2_ProductName2">  </span></th>
+                                        </tr>
+                                        </thead>
+                                    </table>
                                     <div class="panel panel-info ">
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
                                                 <a data-toggle="collapse" data-parent=""  href="#Level_1">
-                                                    <!--<i class="fa fa-table" aria-hidden="true"></i> <span style="right: 50%">投保规则 </span><span style="float: right" id="Compare1_PS1">  </span>-->
-                                                    <!--<button></button>aaaaa</button><button>aaaaa</button><button>aaaaa</button>-->
-                                                    <table class="table table-striped">
+                                                    <table class="table table-hover">
                                                         <thead>
                                                         <tr >
-                                                            <th style="text-align:center;">名称</th>
-                                                            <th style="text-align:center;">城市</th>
-                                                            <th style="text-align:center;">邮编</th>
+                                                            <th ><span id="Compare1_PS1">  </span></th>
+                                                            <th><i class="fa fa-table" aria-hidden="true"></i>投保规则</th>
+                                                            <th><span id="Compare2_PS1">  </span></th>
                                                         </tr>
                                                         </thead>
-                                                        </table>
+                                                    </table>
                                                 </a>
                                             </h4>
                                         </div>
-                                        <div id="Level_1" class="panel-collapse collapse">
+                                        <div id="Level_1" class="panel-collapse collapse in">
                                             <div class="panel-body">
-                                                <table class="table table-bordered">
-                                                    <tbody style="text-align:center;">
-                                                    <tr><td><span>dqksdjlq</span></td> <td>产品渠道</td> <td><span id="Compare1_PeoductWay"></span></td> </tr>
-                                                    <tr><td><span>dqksdjlq</span></td> <td>产品组合</td> <td>独立</td> </tr>
-                                                    <tr><td><span>dqksdjlq</span></td> <td>投保年龄</td> <td><span id="Compare1_ApplicationalAge"></span></td> </tr>
-                                                    <tr><td><span>dqksdjlq</span></td> <td>最大保障年龄</td> <td>终身</td> </tr>
-                                                    <tr><td><span>dqksdjlq</span></td> <td>首次重疾-等待期</td> <td><span id="Compare1_WaitingTimeSeriousFirst"></span></td> </tr>
-                                                    <tr><td><span>dqksdjlq</span></td> <td>多次重疾-等待期</td> <td><span id="Compare1_WaitingTimeSeriousSeveral"></span></td> </tr>
-                                                    <tr><td><span>dqksdjlq</span></td> <td>首次轻疾-等待期</td> <td>90天</td> </tr>
-                                                    <tr><td><span>dqksdjlq</span></td> <td>多次轻疾-等待期</td> <td>-</td> </tr>
-                                                    <tr><td><span>dqksdjlq</span></td> <td>健康告知-等待期</td> <td>-</td> </tr>
+                                                <table class="table table-hover">
+                                                    <tbody>
+                                                    <tr><td><span id="Compare1_ProductWay"></span></td>  <td>产品渠道</td> <td><span id="Compare2_ProductWay"></span></td> </tr>
+                                                    <tr><td>独立</td> <td>产品组合</td> <td>独立</td> </tr>
+                                                    <tr><td><span id="Compare1_ApplicationalAge"></span></td> <td>投保年龄</td> <td><span id="Compare2_ApplicationalAge"></span></td> </tr>
+                                                    <tr> <td>终身</td> <td>最大保障年龄</td> <td>终身</td> </tr>
+                                                    <tr> <td><span id="Compare1_WaitingTimeSeriousFirst"></span></td><td>首次重疾-等待期</td> <td><span id="Compare2_WaitingTimeSeriousFirst"></span></td> </tr>
+                                                    <tr><td><span id="Compare1_WaitingTimeSeriousSeveral"></span></td> <td>多次重疾-等待期</td> <td><span id="Compare2_WaitingTimeSeriousSeveral"></span></td> </tr>
+                                                    <tr> <td>90天</td> <td>首次轻疾-等待期</td> <td>90天</td> </tr>
+                                                    <tr><td>-</td>  <td>多次轻疾-等待期</td> <td>-</td> </tr>
+                                                    <tr> <td>-</td> <td>健康告知-等待期</td> <td>-</td> </tr>
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -275,7 +286,16 @@
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
                                                 <a data-toggle="collapse" data-parent="" href="#Level_2">
-                                                    <i class="fa fa-bars" aria-hidden="true"></i> 危疾保障<span style="float: right"  id="Compare1_PS2"> </span>
+                                                    <!--<i class="fa fa-bars" aria-hidden="true"></i> 危疾保障<span style="float: right"  id=""> </span>-->
+                                                    <table class="table table-hover">
+                                                        <thead>
+                                                        <tr >
+                                                            <th ><span id="Compare1_PS2">  </span></th>
+                                                            <th ><i class="fa fa-table" aria-hidden="true"></i>危疾保障</th>
+                                                            <th ><span id="Compare2_PS2">  </span></th>
+                                                        </tr>
+                                                        </thead>
+                                                    </table>
                                                 </a>
                                             </h4>
                                         </div>
@@ -286,18 +306,27 @@
                                                         <div class="panel-heading">
                                                             <h4 class="panel-title">
                                                                 <a data-toggle="collapse" data-parent=""  href="#Level_2_1">
-                                                                    <i class="fa fa-table" aria-hidden="true"></i> 重疾保障<span style="float: right"  id="Compare1_PS2_1"> </span>
+                                                                    <!--<i class="fa fa-table" aria-hidden="true"></i> 重疾保障<span style="float: right"  id="Compare1_PS2_1"> </span>-->
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                        <tr >
+                                                                            <th><span id="Compare1_PS2_1">  </span></th>
+                                                                            <th><i class="fa fa-table" aria-hidden="true"></i>重疾保障</th>
+                                                                            <th><span id="Compare2_PS2_1">  </span></th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                    </table>
                                                                 </a>
                                                             </h4>
                                                         </div>
-                                                        <div id="Level_2_1" class="panel-collapse collapse">
+                                                        <div id="Level_2_1" class="panel-collapse collapse in">
                                                             <div class="panel-body">
-                                                                <table class="table table-bordered">
+                                                                <table class="table table-hover">
                                                                     <tbody>
-                                                                    <tr> <td>种类</td> <td><span id="Compare1_SeriousVariety"></span></td> </tr>
-                                                                    <tr> <td>保障</td> <td><span id="Compare1_SeriousProtect"></span></td> </tr>
-                                                                    <tr> <td>次数</td> <td><span id="Compare1_SeriousNum"></span></td> </tr>
-                                                                    <tr> <td>分组</td> <td><span id="Compare1_SeriousGroup"></span></td> </tr>
+                                                                    <tr> <td><span id="Compare1_SeriousVariety"></span></td><td>种类</td> <td><span id="Compare2_SeriousVariety"></span></td> </tr>
+                                                                    <tr> <td><span id="Compare1_SeriousProtect"></span></td><td>保障</td> <td><span id="Compare2_SeriousProtect"></span></td> </tr>
+                                                                    <tr> <td><span id="Compare1_SeriousNum"></span></td><td>次数</td> <td><span id="Compare2_SeriousNum"></span></td> </tr>
+                                                                    <tr> <td><span id="Compare1_SeriousGroup"></span></td><td>分组</td> <td><span id="Compare2_SeriousGroup"></span></td> </tr>
                                                                     </tbody>
                                                                 </table>
                                                             </div>
@@ -307,18 +336,27 @@
                                                         <div class="panel-heading">
                                                             <h4 class="panel-title">
                                                                 <a data-toggle="collapse" data-parent=""  href="#Level_2_2">
-                                                                    <i class="fa fa-table" aria-hidden="true"></i> 中症保障<span style="float: right" id="Compare1_PS2_2"> </span>
+                                                                    <!--<i class="fa fa-table" aria-hidden="true"></i> 中症保障<span style="float: right" id="Compare1_PS2_2"> </span>-->
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                        <tr >
+                                                                            <th><span id="Compare1_PS2_2">  </span></th>
+                                                                            <th><i class="fa fa-table" aria-hidden="true"></i>中症保障</th>
+                                                                            <th><span id="Compare2_PS2_2">  </span></th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                    </table>
                                                                 </a>
                                                             </h4>
                                                         </div>
                                                         <div id="Level_2_2" class="panel-collapse collapse in">
                                                             <div class="panel-body">
-                                                                <table class="table table-bordered">
+                                                                <table class="table table-hover">
                                                                     <tbody>
-                                                                    <tr> <td>种类</td> <td>25种</td> </tr>
-                                                                    <tr> <td>保障</td> <td>50%保额</td> </tr>
-                                                                    <tr> <td>次数</td> <td>2次</td> </tr>
-                                                                    <tr> <td>分组</td> <td>不分组</td> </tr>
+                                                                    <tr><td>25种</td> <td>种类</td> <td>25种</td> </tr>
+                                                                    <tr><td>50%保额</td> <td>保障</td> <td>50%保额</td> </tr>
+                                                                    <tr> <td>2次</td><td>次数</td> <td>2次</td> </tr>
+                                                                    <tr> <td>不分组</td><td>是否分组</td> <td>不分组</td> </tr>
                                                                     </tbody>
                                                                 </table>
                                                             </div>
@@ -328,18 +366,27 @@
                                                         <div class="panel-heading">
                                                             <h4 class="panel-title">
                                                                 <a data-toggle="collapse" data-parent=""  href="#Level_2_3">
-                                                                    <i class="fa fa-table" aria-hidden="true"></i> 轻症保障<span style="float: right" id="Compare1_PS2_3"> </span>
+                                                                    <!--<i class="fa fa-table" aria-hidden="true"></i> 轻症保障<span style="float: right" id="Compare1_PS2_3"> </span>-->
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                        <tr >
+                                                                            <th><span id="Compare1_PS2_3">  </span></th>
+                                                                            <th><i class="fa fa-table" aria-hidden="true"></i>轻症保障</th>
+                                                                            <th><span id="Compare2_PS2_3">  </span></th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                    </table>
                                                                 </a>
                                                             </h4>
                                                         </div>
                                                         <div id="Level_2_3" class="panel-collapse collapse in">
                                                             <div class="panel-body">
-                                                                <table class="table table-bordered">
+                                                                <table class="table table-hover">
                                                                     <tbody>
-                                                                    <tr> <td>种类</td> <td>50种</td> </tr>
-                                                                    <tr> <td>保障</td> <td>20%保额</td> </tr>
-                                                                    <tr> <td>次数</td> <td>5次</td> </tr>
-                                                                    <tr> <td>分组</td> <td>不分组</td> </tr>
+                                                                    <tr><td>50种</td>  <td>种类</td> <td>50种</td> </tr>
+                                                                    <tr> <td>20%保额</td> <td>保障</td> <td>20%保额</td> </tr>
+                                                                    <tr> <td>5次</td>  <td>次数</td> <td>5次</td> </tr>
+                                                                    <tr>  <td>不分组</td><td>分组</td> <td>不分组</td> </tr>
                                                                     </tbody>
                                                                 </table>
                                                             </div>
@@ -349,16 +396,25 @@
                                                         <div class="panel-heading">
                                                             <h4 class="panel-title">
                                                                 <a data-toggle="collapse" data-parent=""  href="#Level_2_4">
-                                                                    <i class="fa fa-table" aria-hidden="true"></i> 附加健康保障<span style="float: right" id="Compare1_PS2_4">  </span>
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                        <tr >
+                                                                            <th><span id="Compare1_PS2_4">  </span></th>
+                                                                            <th><i class="fa fa-table" aria-hidden="true"></i>附加健康保障</th>
+                                                                            <th><span id="Compare2_PS2_4">  </span></th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                    </table>
+                                                                    <!--<i class="fa fa-table" aria-hidden="true"></i> 附加健康保障<span style="float: right" id="Compare1_PS2_4">  </span>-->
                                                                 </a>
                                                             </h4>
                                                         </div>
                                                         <div id="Level_2_4" class="panel-collapse collapse">
                                                             <div class="panel-body">
-                                                                <table class="table table-bordered">
+                                                                <table class="table table-hover">
                                                                     <tbody>
-                                                                    <tr> <td>特定疾病</td> <td>-</td> </tr>
-                                                                    <tr> <td>定期重疾</td> <td>-</td> </tr>
+                                                                    <tr> <td>-</td> <td>特定疾病</td> <td>-</td> </tr>
+                                                                    <tr> <td>-</td> <td>定期重疾</td> <td>-</td> </tr>
                                                                     </tbody>
                                                                 </table>
                                                             </div>
@@ -374,7 +430,16 @@
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
                                                 <a data-toggle="collapse" data-parent=""  href="#Level_3">
-                                                    <i class="fa fa-bars" aria-hidden="true"></i> 寿险保障<span style="float: right" id="Compare1_PS3"> </span>
+                                                    <table class="table table-hover">
+                                                        <thead>
+                                                        <tr >
+                                                            <th><span id="Compare1_PS3">  </span></th>
+                                                            <th><i class="fa fa-table" aria-hidden="true"></i>寿险保障</th>
+                                                            <th><span id="Compare2_PS3">  </span></th>
+                                                        </tr>
+                                                        </thead>
+                                                    </table>
+                                                    <!--<i class="fa fa-bars" aria-hidden="true"></i> 寿险保障<span style="float: right" id="Compare1_PS3"> </span>-->
                                                 </a>
                                             </h4>
                                         </div>
@@ -386,18 +451,27 @@
                                                         <div class="panel-heading">
                                                             <h4 class="panel-title">
                                                                 <a data-toggle="collapse" data-parent=""  href="#Level_3_1">
-                                                                    <i class="fa fa-table" aria-hidden="true"></i> 身故保障<span style="float: right" id="Compare1_PS3_1">  </span>
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                        <tr >
+                                                                            <th><span id="Compare1_PS3_1">  </span></th>
+                                                                            <th><i class="fa fa-table" aria-hidden="true"></i>身故保障</th>
+                                                                            <th><span id="Compare2_PS3_1">  </span></th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                    </table>
+                                                                    <!--<i class="fa fa-table" aria-hidden="true"></i> 身故保障<span style="float: right" id="Compare1_PS3_1">  </span>-->
                                                                 </a>
                                                             </h4>
                                                         </div>
-                                                        <div id="Level_3_1" class="panel-collapse collapse">
+                                                        <div id="Level_3_1" class="panel-collapse collapse in">
                                                             <div class="panel-body">
-                                                                <table class="table table-bordered">
+                                                                <table class="table table-hover">
                                                                     <tbody>
-                                                                    <tr> <td>身故-18岁前</td> <td>保费/现价取大</td> </tr>
-                                                                    <tr> <td>身故-18岁后</td> <td>保额</td> </tr>
-                                                                    <tr> <td>全残保障</td> <td>-</td> </tr>
-                                                                    <tr> <td>附加-定期寿险</td> <td>-</td> </tr>
+                                                                    <tr>  <td>保费/现价取大</td><td>身故-18岁前</td> <td>保费/现价取大</td> </tr>
+                                                                    <tr> <td>保额</td> <td>身故-18岁后</td> <td>保额</td> </tr>
+                                                                    <tr>  <td>-</td><td>全残保障</td> <td>-</td> </tr>
+                                                                    <tr> <td>-</td> <td>附加-定期寿险</td> <td>-</td> </tr>
                                                                     </tbody>
                                                                 </table>
                                                             </div>
@@ -407,16 +481,25 @@
                                                         <div class="panel-heading">
                                                             <h4 class="panel-title">
                                                                 <a data-toggle="collapse" data-parent=""  href="#Level_3_2">
-                                                                    <i class="fa fa-table" aria-hidden="true"></i> 储蓄保障<span style="float: right"  id="Compare1_PS3_2"></span>
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                        <tr >
+                                                                            <th><span id="Compare1_PS3_2">  </span></th>
+                                                                            <th><i class="fa fa-table" aria-hidden="true"></i>储蓄保障</th>
+                                                                            <th><span id="Compare2_PS3_2">  </span></th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                    </table>
+                                                                    <!--<i class="fa fa-table" aria-hidden="true"></i> 储蓄保障<span style="float: right"  id="Compare1_PS3_2"></span>-->
                                                                 </a>
                                                             </h4>
                                                         </div>
-                                                        <div id="Level_3_2" class="panel-collapse collapse">
+                                                        <div id="Level_3_2" class="panel-collapse collapse in">
                                                             <div class="panel-body">
-                                                                <table class="table table-bordered">
+                                                                <table class="table table-hover">
                                                                     <tbody>
-                                                                    <tr> <td>附加-祝寿金</td> <td>80岁，祝寿金：保费</td> </tr>
-                                                                    <tr> <td>附加-满期金</td> <td>-</td> </tr>
+                                                                    <tr> <td>80岁，祝寿金：保费</td> <td>附加-祝寿金</td> <td>80岁，祝寿金：保费</td> </tr>
+                                                                    <tr> <td>-</td><td>附加-满期金</td> <td>-</td> </tr>
                                                                     </tbody>
                                                                 </table>
                                                             </div>
@@ -426,16 +509,25 @@
                                                         <div class="panel-heading">
                                                             <h4 class="panel-title">
                                                                 <a data-toggle="collapse" data-parent=""  href="#Level_3_3">
-                                                                    <i class="fa fa-table" aria-hidden="true"></i> 投资回报<span style="float: right"  id="Compare1_PS3_3"> </span>
+                                                                    <table class="table table-hover">
+                                                                        <thead>
+                                                                        <tr >
+                                                                            <th><span id="Compare1_PS3_3">  </span></th>
+                                                                            <th><i class="fa fa-table" aria-hidden="true"></i>投资回报</th>
+                                                                            <th><span id="Compare2_PS3_3">  </span></th>
+                                                                        </tr>
+                                                                        </thead>
+                                                                    </table>
+                                                                    <!--<i class="fa fa-table" aria-hidden="true"></i> 投资回报<span style="float: right"  id="Compare1_PS3_3"> </span>-->
                                                                 </a>
                                                             </h4>
                                                         </div>
-                                                        <div id="Level_3_3" class="panel-collapse collapse">
-                                                            <table class="table table-bordered">
+                                                        <div id="Level_3_3" class="panel-collapse collapse in">
+                                                            <table class="table table-hover">
                                                                 <tbody>
-                                                                <tr> <td>红利-领取方式</td> <td>-</td> </tr>
-                                                                <tr> <td>红利-保证与否</td> <td>-</td> </tr>
-                                                                <tr> <td>红利-最低保证收益率</td> <td>-</td> </tr>
+                                                                <tr><td>-</td> <td>红利-领取方式</td> <td>-</td> </tr>
+                                                                <tr><td>-</td> <td>红利-保证与否</td> <td>-</td> </tr>
+                                                                <tr><td>-</td><td>红利-最低保证收益率</td> <td>-</td> </tr>
                                                                 </tbody>
                                                             </table>
                                                         </div>
@@ -449,19 +541,28 @@
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
                                                 <a data-toggle="collapse" data-parent="" href="#Level_4">
-                                                    <i class="fa fa-table" aria-hidden="true"></i> 保费豁免<span style="float: right"  id="Compare1_PS4">  </span>
+                                                    <table class="table table-hover">
+                                                        <thead>
+                                                        <tr >
+                                                            <th><span id="Compare1_PS4">  </span></th>
+                                                            <th><i class="fa fa-table" aria-hidden="true"></i>保费豁免</th>
+                                                            <th><span id="Compare2_PS4">  </span></th>
+                                                        </tr>
+                                                        </thead>
+                                                    </table>
+                                                    <!--<i class="fa fa-table" aria-hidden="true"></i> 保费豁免<span style="float: right"  id="Compare1_PS4">  </span>-->
                                                 </a>
                                             </h4>
                                         </div>
-                                        <div id="Level_4" class="panel-collapse collapse">
+                                        <div id="Level_4" class="panel-collapse collapse in">
                                             <div class="panel-body">
 
-                                                <table class="table table-bordered">
+                                                <table class="table table-hover">
                                                     <tbody>
-                                                    <tr> <td>保费豁免-被保人重疾</td> <td>-</td> </tr>
-                                                    <tr> <td>保费豁免-被保人中症</td> <td>中症</td> </tr>
-                                                    <tr> <td>保费豁免-被保人轻症</td> <td>轻症</td> </tr>
-                                                    <tr> <td>保费豁免-投保人</td> <td>-</td> </tr>
+                                                    <tr><td>-</td> <td>保费豁免-被保人重疾</td> <td>-</td> </tr>
+                                                    <tr><td>中症</td> <td>保费豁免-被保人中症</td> <td>中症</td> </tr>
+                                                    <tr><td>轻症</td> <td>保费豁免-被保人轻症</td> <td>轻症</td> </tr>
+                                                    <tr> <td>-</td><td>保费豁免-投保人</td> <td>-</td> </tr>
                                                     </tbody>
                                                 </table>
 
@@ -472,22 +573,31 @@
                                         <div class="panel-heading">
                                             <h4 class="panel-title">
                                                 <a data-toggle="collapse" data-parent=""   href="#Level_5">
-                                                    <i class="fa fa-table" aria-hidden="true"></i> 费率比较 <span style="float: right"  id="Compare1_PS5">  </span>
+                                                    <table class="table table-hover">
+                                                        <thead>
+                                                        <tr >
+                                                            <th><span id="Compare1_PS5">  </span></th>
+                                                            <th><i class="fa fa-table" aria-hidden="true"></i>费率比较</th>
+                                                            <th><span id="Compare2_PS5">  </span></th>
+                                                        </tr>
+                                                        </thead>
+                                                    </table>
+                                                    <!--<i class="fa fa-table" aria-hidden="true"></i> 费率比较 <span style="float: right"  id="Compare1_PS5">  </span>-->
                                                 </a>
                                             </h4>
                                         </div>
                                         <div id="Level_5" class="panel-collapse collapse">
                                             <div class="panel-body">
 
-                                                <table class="table table-bordered">
+                                                <table class="table table-hover">
                                                     <tbody>
-                                                    <tr> <td>0-10岁</td> <td>-</td> </tr>
-                                                    <tr> <td>10-20岁</td> <td>-</td> </tr>
-                                                    <tr> <td>20-30岁</td> <td>-</td> </tr>
-                                                    <tr> <td>30-40岁</td> <td>-</td> </tr>
-                                                    <tr> <td>40-50岁</td> <td>-</td> </tr>
-                                                    <tr> <td>50-60岁</td> <td>-</td> </tr>
-                                                    <tr> <td>60-70岁</td> <td>-</td> </tr>
+                                                    <tr><td>-</td> <td>0-10岁</td> <td>-</td> </tr>
+                                                    <tr><td>-</td> <td>10-20岁</td> <td>-</td> </tr>
+                                                    <tr><td>-</td> <td>20-30岁</td> <td>-</td> </tr>
+                                                    <tr><td>-</td> <td>30-40岁</td> <td>-</td> </tr>
+                                                    <tr><td>-</td> <td>40-50岁</td> <td>-</td> </tr>
+                                                    <tr><td>-</td> <td>50-60岁</td> <td>-</td> </tr>
+                                                    <tr><td>-</td> <td>60-70岁</td> <td>-</td> </tr>
                                                     </tbody>
                                                 </table>
 
@@ -497,33 +607,9 @@
                                 </div>
 
                             </div>
-                        </div>
-                    </div>
-
-                    <ul id="Two_Tab" class="nav nav-tabs">
-                        <li class="active"><a href="#Value_professor" data-toggle="tab"> 专家评价 </a> </li>
-                        <li><a href="#Value_User" data-toggle="tab">用户评价</a></li>
-                    </ul>
-                    <div id="Two_TabContent" class="tab-content">
-
-                        <div class="tab-pane fade in active" id="Value_professor">
-                            <div class="well" style="background-color: #ffffff">
-                                <div class="container">
-                                    <div class="col-sm-8  MyBorderfor8">
-
-                                    </div>
-                                    <div class="col-sm-4  MyBorderfor4">
-
-                                    </div>
-                                </div>
+                            <div class="col-md-1 column">
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="Value_User">
-                            <div class="well" style="background-color: #ffffff">
-
-                            </div>
-                        </div>
-
                     </div>
 
                 </div><!-- row -->

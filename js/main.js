@@ -132,20 +132,16 @@ jQuery(function ($) {
 // script end
 
      $("#loginsubmit").click(function(){
-         alert("1");alert("2");
-        $.post( "http://193.112.18.21:8080/login",
-                 {
-                     Username:"CUILIJIAy",
-                     Password:"CUILIJIAy"
-                 },
-                 function(data){
-                     alert("数据: \n" + data);
+
+         var username=$("#Username").val();
+         var password=$("#Password").val();
+         var checktag=0;
+        $.post(  "http://193.112.18.21:8080/login",
+                 {Username:username, Password:password },
+                 function(data,status,Head){
+                     alert("是否登录成功:" + data.code+"\n发送时候成功:"+status+"\nSessionid:"+Head.getResponseHeader("Faygosessionid"));
                  }
               );
-         alert("4");
-         alert("5");
-         var sessionID=$.cookie('FaygosessionID');
-         alert("6"+sessionID);
+
      });
 });
-

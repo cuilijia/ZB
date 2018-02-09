@@ -3210,11 +3210,17 @@ input, select, a, .transition,
 
 
 .Mycard {
-	border:2px solid rgba(67, 144, 150, 0.35);
-	padding:15px 20px;
+	border:0px solid rgba(67, 144, 150, 0.35);
+	padding:0px 0px;
 	background: #ffffff;
 	width:540px;
 	border-radius:15px;
+}
+
+.Myline {
+	border:0.5px dashed rgb(99, 99, 99);
+	background: #ffffff;
+	width:100%;
 }
 
 
@@ -3245,4 +3251,38 @@ input, select, a, .transition,
 .RadarSizeForCompare{
 	width: 300px;
 	height:350px;
+}
+
+.table thead th{
+	text-align:center;
+}
+
+.table tbody td{
+	text-align:center;
+}
+
+.table tbody td{
+	height: 10px;
+	width: 100px;
+}
+
+.featured-top .nav li a{
+	/*background-color: #00ff4f;*/
+	width: 60px;
+	height: 40px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border-top-left-radius: 17px;
+	border-top-right-radius: 17px;
+}
+.featured-top .nav li{
+	/*background-color: #ff0002;*/
+	text-align: center;
+}
+
+.featured-top  .nav li a:hover{
+	/*background-color: #b6d8ff;*/
+}
+.featured-top  .nav li a:active{
+	/*background-color: #ffc300;*/
 }

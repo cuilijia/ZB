@@ -138,86 +138,6 @@ function UserRadarSmall(size,ProduceId,Name,a,b,c,d){
     myChart.setOption(option);
 }
 
-function UserRadarlargeForCampare(size,ProduceId,NameA,aA,bA,cA,dA,NameB,aB,bB,cB,dB){
-    // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById(ProduceId));
-    // 指定图表的配置项和数据
-    option = {
-        title: { text: '用户角度'  },
-        tooltip: {  trigger: 'axis',  },
-        legend: {
-            x: 'right',
-            data:[NameA,NameB,'C','D','E']
-        },
-        radar: [ {  indicator: [
-            {text: '公司信誉', max: 10.0, color: 'black'},
-            {text: '理赔速度', max: 10.0, color: 'black'},
-            {text: '代理人综合服务', max: 10.0, color: 'black'},
-            {text: '收益回报', max: 10.0, color: 'black'} ],
-            center: ['50%','55%'],
-            radius: size
-        }],
-        series: [{
-            type: 'radar',
-            tooltip: {
-                trigger: 'item'
-            },
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data: [
-                {  value: [aA,bA,cA,dA],
-                   name: NameA } ,
-                {
-                    value: [6.2, 3.1, 3.2, 7.6],
-                    name: 'D'
-                }
-            ]
-        }]
-    };
-    // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
-}
-
-function ProfessorRadarlargeForCampare(size,ProduceId,NameA,aA,bA,cA,dA,eA,NameB,aB,bB,cB,dB,eB){
-    // 基于准备好的dom，初始化echarts实例
-    var myChart = echarts.init(document.getElementById(ProduceId));
-    // 指定图表的配置项和数据
-    option = {
-        title: { text: '专家角度'  },
-        tooltip: {  trigger: 'axis',  },
-        legend: {
-            x: 'right',
-            data:[NameA,'B','C','D','E']
-        },
-        radar: [ {  indicator: [
-            {text: '投保规则', max: 10.0, color: 'black'},
-            {text: '危疾保障', max: 10.0, color: 'black'},
-            {text: '寿险保障', max: 10.0, color: 'black'},
-            {text: '保费豁免', max: 10.0, color: 'black'},
-            {text: '费率', max: 10.0, color: 'black'} ],
-            center: ['50%','55%'],
-            radius: size
-        }],
-        series: [{
-            type: 'radar',
-            tooltip: {
-                trigger: 'item'
-            },
-            itemStyle: {normal: {areaStyle: {type: 'default'}}},
-            data: [
-                {
-                    value: [aA,bA,cA,dA,eA],
-                    name: NameA
-                },
-                {
-                    value: [6.2, 3.1, 3.2, 7.6,4.5],
-                    name: 'D'
-                }
-            ]
-        }]
-    };
-    // 使用刚指定的配置项和数据显示图表。
-    myChart.setOption(option);
-}
 
 function isHidden(oDiv){
     var vDiv = document.getElementById(oDiv);
@@ -377,10 +297,93 @@ function loaddetailpage(textx,detailNO,NO) {
         " UserRadarlarge(83,'ProductRadarUserTAG','"+obj.ProductsList[NO].ProductName+"',"+obj.ProductsList[NO].U1+","+obj.ProductsList[NO].U2+","+obj.ProductsList[NO].U3+","+obj.ProductsList[NO].U4+","+") </script>")
 }
 
+
+function UserRadarlargeForCampare(size,ProduceId,NameA,aA,bA,cA,dA,NameB,aB,bB,cB,dB){
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById(ProduceId));
+    // 指定图表的配置项和数据
+    option = {
+        title: { text: '用户角度'  },
+        tooltip: {  trigger: 'axis',  },
+        legend: {
+            x: 'right',
+            data:[NameA,NameB,'C','D','E']
+        },
+        radar: [ {  indicator: [
+            {text: '公司信誉', max: 10.0, color: 'black'},
+            {text: '理赔速度', max: 10.0, color: 'black'},
+            {text: '代理人综合服务', max: 10.0, color: 'black'},
+            {text: '收益回报', max: 10.0, color: 'black'} ],
+            center: ['50%','55%'],
+            radius: size
+        }],
+        series: [{
+            type: 'radar',
+            tooltip: {
+                trigger: 'item'
+            },
+            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+            data: [
+                {  value: [aA,bA,cA,dA],
+                    name: NameA } ,
+                {
+                    value: [aB, bB, cB, dB],
+                    name: NameB
+                }
+            ]
+        }]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+}
+
+function ProfessorRadarlargeForCampare(size,ProduceId,NameA,aA,bA,cA,dA,eA,NameB,aB,bB,cB,dB,eB){
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById(ProduceId));
+    // 指定图表的配置项和数据
+    option = {
+        title: { text: '专家角度'  },
+        tooltip: {  trigger: 'axis',  },
+        legend: {
+            x: 'right',
+            data:[NameA,NameB,'C','D','E']
+        },
+        radar: [ {  indicator: [
+            {text: '投保规则', max: 10.0, color: 'black'},
+            {text: '危疾保障', max: 10.0, color: 'black'},
+            {text: '寿险保障', max: 10.0, color: 'black'},
+            {text: '保费豁免', max: 10.0, color: 'black'},
+            {text: '费率', max: 10.0, color: 'black'} ],
+            center: ['50%','55%'],
+            radius: size
+        }],
+        series: [{
+            type: 'radar',
+            tooltip: {
+                trigger: 'item'
+            },
+            itemStyle: {normal: {areaStyle: {type: 'default'}}},
+            data: [
+                {
+                    value: [aA,bA,cA,dA,eA],
+                    name: NameA
+                },
+                {
+                    value: [aB, bB, cB, dB,eB],
+                    name: NameB
+                }
+            ]
+        }]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+}
+
 function LoadComparePage(textx,detailNOA,NOA,detailNOB,NOB) {
     obj = JSON.parse(textx);
     $("#"+detailNOA+"_ProductName").append(obj.ProductsList[NOA].ProductName)
     $("#"+detailNOA+"_CompanyName").append(obj.ProductsList[NOA].CompanyName)
+    $("#"+detailNOA+"_ProductName2").append(obj.ProductsList[NOA].ProductName)
 
     $("#"+detailNOA+"_ProductContent").append( " <li><a href='#'><i class='fa fa-key' aria-hidden='true'></i>储蓄型人寿 </a></li>"+
         " <li><a href='#'><i class='fa fa-clock-o' aria-hidden='true'></i>投保年龄："+obj.ProductsList[NOA].ApplicationalAge+"</a></li>"+
@@ -389,7 +392,7 @@ function LoadComparePage(textx,detailNOA,NOA,detailNOB,NOB) {
     $("#"+detailNOA+"_IMG").append(" <img src='images/companys/"+obj.ProductsList[NOA].CompanyName+".jpg' alt='Image' class='img-responsive'>")
 
     $("#"+detailNOA+"_PS1").append(obj.ProductsList[NOA].PS1+" / 10.0")
-    $("#"+detailNOA+"_PeoductWay").append(obj.ProductsList[NOA].ProductWay)
+    $("#"+detailNOA+"_ProductWay").append(obj.ProductsList[NOA].ProductWay)
     $("#"+detailNOA+"_ApplicationalAge").append(obj.ProductsList[NOA].ApplicationalAge)
     $("#"+detailNOA+"_WaitingTimeSeriousFirst").append(obj.ProductsList[NOA].WaitingTimeSeriousFirst)
     $("#"+detailNOA+"_WaitingTimeSeriousSeveral").append(obj.ProductsList[NOA].WaitingTimeSeriousSeveral)
@@ -402,7 +405,7 @@ function LoadComparePage(textx,detailNOA,NOA,detailNOB,NOB) {
     $("#"+detailNOA+"_SeriousProtect").append(obj.ProductsList[NOA].SeriousProtect)
     $("#"+detailNOA+"_SeriousNum").append(obj.ProductsList[NOA].SeriousNum)
     $("#"+detailNOA+"_SeriousGroup").append(obj.ProductsList[NOA].SeriousGroup)
-    $("#"+detailNOA+"_PeoductWay").append(obj.ProductsList[NOA].PeoductWay)
+    // $("#"+detailNOA+"_PeoductWay").append(obj.ProductsList[NOA].PeoductWay)
     $("#"+detailNOA+"_PS3").append(obj.ProductsList[NOA].PS3+" / 10.0")
     $("#"+detailNOA+"_PS4").append(obj.ProductsList[NOA].PS4+" / 10.0")
     $("#"+detailNOA+"_PS5").append(obj.ProductsList[NOA].PS5+" / 10.0")
@@ -416,6 +419,7 @@ function LoadComparePage(textx,detailNOA,NOA,detailNOB,NOB) {
     // 第二个产品
     $("#"+detailNOB+"_ProductName").append(obj.ProductsList[NOB].ProductName)
     $("#"+detailNOB+"_CompanyName").append(obj.ProductsList[NOB].CompanyName)
+    $("#"+detailNOB+"_ProductName2").append(obj.ProductsList[NOB].ProductName)
 
     $("#"+detailNOB+"_ProductContent").append( " <li><a href='#'><i class='fa fa-key' aria-hidden='true'></i>储蓄型人寿 </a></li>"+
         " <li><a href='#'><i class='fa fa-clock-o' aria-hidden='true'></i>投保年龄："+obj.ProductsList[NOB].ApplicationalAge+"</a></li>"+
@@ -424,7 +428,7 @@ function LoadComparePage(textx,detailNOA,NOA,detailNOB,NOB) {
     $("#"+detailNOB+"_IMG").append(" <img src='images/companys/"+obj.ProductsList[NOB].CompanyName+".jpg' alt='Image' class='img-responsive'>")
 
     $("#"+detailNOB+"_PS1").append(obj.ProductsList[NOB].PS1+" / 10.0")
-    $("#"+detailNOB+"_PeoductWay").append(obj.ProductsList[NOB].ProductWay)
+    $("#"+detailNOB+"_ProductWay").append(obj.ProductsList[NOB].ProductWay)
     $("#"+detailNOB+"_ApplicationalAge").append(obj.ProductsList[NOB].ApplicationalAge)
     $("#"+detailNOB+"_WaitingTimeSeriousFirst").append(obj.ProductsList[NOB].WaitingTimeSeriousFirst)
     $("#"+detailNOB+"_WaitingTimeSeriousSeveral").append(obj.ProductsList[NOB].WaitingTimeSeriousSeveral)
@@ -437,7 +441,7 @@ function LoadComparePage(textx,detailNOA,NOA,detailNOB,NOB) {
     $("#"+detailNOB+"_SeriousProtect").append(obj.ProductsList[NOB].SeriousProtect)
     $("#"+detailNOB+"_SeriousNum").append(obj.ProductsList[NOB].SeriousNum)
     $("#"+detailNOB+"_SeriousGroup").append(obj.ProductsList[NOB].SeriousGroup)
-    $("#"+detailNOB+"_PeoductWay").append(obj.ProductsList[NOB].PeoductWay)
+    // $("#"+detailNOB+"_PeoductWay").append(obj.ProductsList[NOB].PeoductWay)
     $("#"+detailNOB+"_PS3").append(obj.ProductsList[NOB].PS3+" / 10.0")
     $("#"+detailNOB+"_PS4").append(obj.ProductsList[NOB].PS4+" / 10.0")
     $("#"+detailNOB+"_PS5").append(obj.ProductsList[NOB].PS5+" / 10.0")
@@ -449,14 +453,14 @@ function LoadComparePage(textx,detailNOA,NOA,detailNOB,NOB) {
     $("#"+detailNOB+"_CompanyName3").append(obj.ProductsList[NOB].CompanyName)
     $("#"+detailNOB+"_UserValueNum").append(obj.ProductsList[NOB].ValueNum)
     // 第二个产品
-    $("#"+detailNOA+"_ProductRadarUser").append( " <div id='"+detailNOA+"ProductRadarUserTAG' class='RadarSizeForCompare'></div>"+
+    $("#"+detailNOA+"_ProductRadarUser").append( " <div id='"+detailNOA+"_ProductRadarUserTAG' class='RadarSizeForCompare'></div>"+
         " <script type='text/javascript'>"+
         // " UserRadarlargeForCampare(83,'ProductRadarUserTAG','"+obj.ProductsList[NOA].ProductName+"',"+obj.ProductsList[NOA].U1+","+obj.ProductsList[NOA].U2+","+obj.ProductsList[NOA].U3+","+obj.ProductsList[NOA].U4+") </script>")
-        " UserRadarlargeForCampare(83,'"+detailNOA+"ProductRadarUserTAG','"+obj.ProductsList[NOA].ProductName+"',"+obj.ProductsList[NOA].U1+","+obj.ProductsList[NOA].U2+","+obj.ProductsList[NOA].U3+","+obj.ProductsList[NOA].U4+") </script>")
+        " UserRadarlargeForCampare(86,'"+detailNOA+"_ProductRadarUserTAG','"+obj.ProductsList[NOA].ProductName+"',"+obj.ProductsList[NOA].U1+","+obj.ProductsList[NOA].U2+","+obj.ProductsList[NOA].U3+","+obj.ProductsList[NOA].U4+",'"+obj.ProductsList[NOB].ProductName+"',"+obj.ProductsList[NOB].U1+","+obj.ProductsList[NOB].U2+","+obj.ProductsList[NOB].U3+","+obj.ProductsList[NOB].U4+") </script>")
 
-    $("#"+detailNOA+"_ProductRadar").append( " <div id='"+detailNOA+"ProductRadar' class='RadarSizeForCompare'></div>"+
+    $("#"+detailNOA+"_ProductRadar").append( " <div id='"+detailNOA+"_ProductRadarProfessorTAG' class='RadarSizeForCompare'></div>"+
         " <script type='text/javascript'>"+
-        " ProfessorRadarlargeForCampare(90,'"+detailNOA+"ProductRadar','"+obj.ProductsList[NOA].ProductName+"',"+obj.ProductsList[NOA].PS1+","+obj.ProductsList[NOA].PS2+","+obj.ProductsList[NOA].PS3+","+obj.ProductsList[NOA].PS4+","+obj.ProductsList[NOA].PS5+") </script>")
+        " ProfessorRadarlargeForCampare(86,'"+detailNOA+"_ProductRadarProfessorTAG','"+obj.ProductsList[NOA].ProductName+"',"+obj.ProductsList[NOA].PS1+","+obj.ProductsList[NOA].PS2+","+obj.ProductsList[NOA].PS3+","+obj.ProductsList[NOA].PS4+","+obj.ProductsList[NOA].PS5+",'"+obj.ProductsList[NOB].ProductName+"',"+obj.ProductsList[NOB].PS1+","+obj.ProductsList[NOB].PS2+","+obj.ProductsList[NOB].PS3+","+obj.ProductsList[NOB].PS4+","+obj.ProductsList[NOB].PS5+") </script>")
 
 }
 
