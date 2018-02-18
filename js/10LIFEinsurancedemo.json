@@ -19,7 +19,7 @@
     "Website": "http://www.axa.com/",
     "Introduction": "法国安盛公司（AXA）是全球最大的保险集团。起初是众多互助型保险公司的机械联合企业，但现在它是当今世界上最大的一家保险公司（同德国Allianz 和荷兰ING一样），也是一个资产管理巨头。AXA在美国有子公司安盛金融公司（AXA Financial），该子公司持有联合资产管理公司（Alliance Capital Management）的绝大多数股份；同时在海外其它地方都有众多子公司。",
     "Id": 1,
-    "Img": "img/companys/安盛.jpg"
+    "Img": "images/companys/安盛.jpg"
   }, {
     "Name": "美国友邦保险有限公司",
     "EnglishName": "American International Assurance Co",
@@ -27,7 +27,7 @@
     "website": "http://www.aia.com/",
     "Introduction": "美国友邦保险有限公司 （简称“友邦保险”或“AIA”）是美国国际集团（AIG）的全资附属公司，自1931年在上海创立以来，已服务亚洲地区的广大客户七十多年之久。",
     "id": 2,
-    "Img": "img/companys/友邦.jpg"
+    "Img": "images/companys/友邦.jpg"
   }, {
     "Name": "英国保诚集团",
     "EnglishName": "Prudential",
@@ -182,7 +182,7 @@
     "Img": ""
   }],
   "InsuranceProducts": [{
-    "Id": 30,
+      "Id": 30,
     "NameZHCN": "「易達終身保」",
     "NameEN": "Executive Life",
     "TypeName": "儲蓄型人壽",

@@ -133,15 +133,74 @@ jQuery(function ($) {
 
      $("#loginsubmit").click(function(){
 
-         var username=$("#Username").val();
-         var password=$("#Password").val();
-         var checktag=0;
-        $.post(  "http://193.112.18.21:8080/login",
-                 {Username:username, Password:password },
-                 function(data,status,Head){
-                     alert("是否登录成功:" + data.code+"\n发送时候成功:"+status+"\nSessionid:"+Head.getResponseHeader("Faygosessionid"));
-                 }
-              );
+        var username=$("#Username").val();
+        var password=$("#Password").val();
+        login(username,password);
+    });
 
-     });
+    $("#signupsubmit").click(function(){
+
+        var username=$("#Username").val();
+        var password=$("#Password").val();
+        signup(username,password);
+    });
+
+    function login(name,pass) {
+        $.ajax({
+            url: "http://193.112.18.21:8080/login",
+            type: 'post',
+            data: {Username: name, Password: pass},
+            dataType: 'json',
+            xhrFields: {withCredentials: true},
+            success: function (data, textStatus, request) {
+                console.log("response:" + data['code']);
+                console.log(request.getResponseHeader('Content-Type'));
+                console.log(request.getResponseHeader('Faygosessionid'));
+                //alert(data.code);
+                if(data.code==1)
+                    window.location.replace("index.html");
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                console.info("error.");
+                if (xhr.status == 200) {
+                    alert(ajaxOptions);
+                }
+                else {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            }
+        });
+    }
+    function signup(name,pass) {
+        $.ajax({
+            url: "http://193.112.18.21:8080/register",
+            type: 'post',
+            data: {Username: name, Password: pass},
+            dataType: 'json',
+            xhrFields: {withCredentials: true},
+            success: function (data, textStatus, request) {
+                console.log("response:" + data['code']);
+                console.log(request.getResponseHeader('Content-Type'));
+                console.log(request.getResponseHeader('Faygosessionid'));
+                //alert(data.code);
+                if(data.code==1)
+                    window.location.replace("index.html");
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                console.info("error.");
+                if (xhr.status == 200) {
+                    alert(ajaxOptions);
+                }
+                else {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            }
+        });
+    }
+
+
+
 });
+

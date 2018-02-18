@@ -4,17 +4,279 @@
     <meta charset="utf-8">
     <title>baishun's ajax</title>
     <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 
+    <script src="js/jquery.raty.min.js"></script>
+
+    <script src="js/price-range.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/switcher.js"></script>
+
+    <script src="js/starScore.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/selectivity-jquery.css">
+
+
+    <link rel="stylesheet" href="css/star.css" >
+    <!-- CSS -->
+
+    <link rel="stylesheet" type="text/css" href="css/style/common.css">
+    <link rel="stylesheet" type="text/css" href="css/style/cssreset-min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/icofont.css">
+    <link rel="stylesheet" href="css/slidr.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link id="preset" rel="stylesheet" href="css/presets/preset1.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link type="text/css" rel="stylesheet" href="css/application.css">
+
+
+    <script type="text/javascript">
+        $.fn.raty.defaults.path = 'images/star';
+        function createstar(idname,score) {
+            $('#'+idname).raty({
+                size: 24,
+                starHalf: 'star-half-big.png',
+                starOff: 'star-off-big.png',
+                starOn: 'star-on-big.png',
+                readOnly: true,
+                score: score,
+                target    : '#hintX',
+                targetType: 'number',
+                targetKeep: true,
+                precision: true
+            });
+        };
+    </script>
 </head>
 <body>
 
-<button onclick="login()">发送一个 HTTP POST 请求页面并获取返回内容</button>
+<button onclick="login()">发送一个 HTTP login 请求页面并获取返回内容</button>
+<button onclick="logout()">发送一个 HTTP logout 请求页面并获取返回内容</button>
 <button onclick="newpage()">new</button>
 <button onclick="getcuilijia()">get</button>
+<button onclick="getmyname()">getmyname</button>
+
+<div class="profile section clearfix">
+    <div class="container">
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div class="row clearfix">
+                    <div class="col-md-4 column">
+                        <div>
+                            <div class="icons">
+                                <i class="fa fa-black-tie" aria-hidden="true"></i>
+                            </div>
+                            <div id="example-3" class="selectivity-input example-input" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 column">
+                        <div>
+                            <div class="icons">
+                                <i class="fa fa-black-tie" aria-hidden="true"></i>
+                            </div>
+                            <div id="example-4" class="selectivity-input example-input" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 column">
+                        <div>
+                            <div class="buttons">
+                                <a id="test11" href="#" class="btn">开始对比</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- profile -->
+
+
+<div class="row form-group rating" >
+    <label class="col-sm-3 label-title">Rating</label>
+    <div class="col-sm-9">
+        <div class="rating-star">
+            <div class="rating" >
+                <input type="radio" id="star1" name="rating"><label class="full" for="star1"></label>
+                <input type="radio" id="star2" name="rating"><label class="half" for="star2"></label>
+                <input type="radio" id="star3" name="rating"><label class="full" for="star3"></label>
+                <input type="radio" id="star4" name="rating"><label class="half" for="star4"></label>
+                <input type="radio" id="star5" name="rating"><label class="full" for="star5"></label>
+                <input type="radio" id="star6" name="rating"><label class="half" for="star6"></label>
+                <input type="radio" id="star7" name="rating"><label class="full" for="star7"></label>
+                <input type="radio" id="star8" name="rating"><label class="half" for="star8"></label>
+                <input type="radio" id="star9" name="rating"><label class="full" for="star9"></label>
+                <input type="radio" id="star10" name="rating"><label class="half" for="star10"></label>
+                <button id="buttonx">测试</button>
+            </div>
+        </div><!-- rating-star -->
+    </div>
+</div>
+
+
+<h1>xxxxxxxxxxxxxxxxxxx</h1>
+<h2 id="size"> <a href="#size">Size</a> </h2>
+<p> The size in pixel of the icon you will to use.<br />
+    It changes the size for all icons. </p>
+<div class="MYSTAR">
+    <div id="MYsize-demoX"></div>
+</div>
+
+<h2 id="readOnly"> <a href="#readOnly">Read Only</a> </h2>
+<p> You can prevent users to vote.
+
+    It can be applied with or without <a href="#score">score</a> and all stars will receives the <a href="#hints">hint</a> corresponding of the selected star.<br />
+    Stop the mouse over the stars to see: </p>
+<div class="MYSTAR">
+    <div id="readOnly-demo" class="target-demo"></div>
+    <div id="hintX" class="hint"></div>
+    <script>createstar("readOnly-demo",3.5)</script>
+</div>
+
+
+<h2 id="precision"> <a href="#precision">Precision</a> </h2>
+<p> You can get the right position of the cursor to get a precision <a href="#score">score</a>.<br />
+    The star is represented just as half and full star, but the <a href="#score">score</a> is saved with precision.<br />
+    When you enable this option the <a href="#half">half</a> options is automatically enabled and <a href="#targetType">targetType</a> is changed to <code>score</code>. </p>
+<div class="MYSTAR">
+    <div id="MYprecision-demoX" class="target-demo"></div>
+    <div id="MYprecision-hintX" class="hint"></div>
+</div>
+<h1>xxxxxxxxxxxxxxxxxxxxxxx</h1>
+<!--<div id="star111"></div>-->
+
+<!-- 按钮触发模态框 -->
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal" >
+    评论
+</button>
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="#">
+            <fieldset>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >
+                    &times;
+                </button>
+                <div class="section postdetails">
+                    <div class="modal-header" style="text-align: center;">
+
+                        <h3 class="modal-title" id="myModalLabel" >
+                            <p style="color: #0a0a0a">请写下你的评论</p>
+                        </h3>
+                        <h5><p style="color: rgba(0, 0, 0, 0.49)">描述精确的评论更易得到赞同</p></h5>
+                    </div>
+                    <h1></h1>
+                    <div class="row">
+                        <label class="col-sm-4 label-title">公司信誉：</label>
+                        <div class="col-sm-8">
+                            <div id="commentstar1"  class="block clearfix" >
+                                <div class="star_score"></div>
+                                <p style="float:left;"><span class="fenshu"></span> 分</p>
+                                <div class="attitude"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-4 label-title">收益回报：</label>
+                        <div class="col-sm-8">
+                            <div id="commentstar2"  class="block clearfix" >
+                                <div class="star_score"></div>
+                                <p style="float:left;"><span class="fenshu"></span> 分</p>
+                                <div class="attitude"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-4 label-title">理赔信誉：</label>
+                        <div class="col-sm-8">
+                            <div id="commentstar3"  class="block clearfix" >
+                                <div class="star_score"></div>
+                                <p style="float:left;"><span class="fenshu"></span> 分</p>
+                                <div class="attitude"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-4 label-title">代理人服务：</label>
+                        <div class="col-sm-8">
+                            <div id="commentstar4"  class="block clearfix" >
+                                <div class="star_score"></div>
+                                <p style="float:left;"><span class="fenshu"></span> 分</p>
+                                <div class="attitude"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label class="col-sm-4 label-title">综合评分：</label>
+                        <div class="col-sm-8">
+                            <div id="commentstarx"  class="block clearfix" >
+                                <div class="star_score"></div>
+                                <p style="float:left;"><span class="fenshu"></span> 分</p>
+                                <div class="attitude"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row form-group item-description">
+                        <div class="col-sm-12">
+                            <textarea class="form-control" id="textarea" placeholder="写下评价内容的详细信息" rows="3"></textarea>
+                        </div>
+                    </div>
+
+                    <!--<div class="row form-group">-->
+                    <label class="upload-image left" for="upload-image-one">
+                        <input type="file" id="upload-image-one">
+                    </label>
+                    <!--</div>-->
+                    <div class="checkbox">
+                        <label><input type="checkbox" name="want">匿名提交</label>
+                    </div><!-- checkbox -->
+                    <div class="modal-footer" style="text-align: center;">
+                        <button type="button" class="btn btn-primary">
+                            提交
+                        </button>
+                    </div>
+                </div><!-- postdetails -->
+            </fieldset>
+        </form><!-- form -->
+    </div><!-- /.modal -->
+</div>
+
+
+<div class="emoticons">
+    <div class="publisher">
+        <p><textarea name="content"></textarea></p>
+        <p><a class="trigger" href="javascript:;">☺</a></p>
+    </div>
+    <div style="text-align:right;"><button id="format">解析</button></div>
+    <div id="result" class="result"></div>
+</div>
+<script>
+    $.emoticons({
+        'activeCls':'trigger-active'
+    },function(api){
+        var $content = $('textarea[name="content"]');
+        var $result = $('#result');
+        $('#format').click(function(){
+            $result.html(api.format($content.val()));
+        });
+    });
+</script>
 
 </body>
 
+
 <script>
+
+    $("#buttonx").click(function(){
+        var value = $("#star1").html().trim();
+        alert(value);
+    });
+
     function setCookie(cname,cvalue,exdays){
         var d = new Date();
         d.setTime(d.getTime()+(exdays*24*60*60*1000));
@@ -31,21 +293,27 @@
         return "";
     }
 
-    function login() {
-//        setCookie("mytest","  this is a test",30);
-         var user=getCookie("mytest");
-        alert("mytest:" + user);
+    function getmyname() {
         $.ajax({
-            url: "http://193.112.18.21:8080/login",
+            url: "http://193.112.18.21:8080/checkme",
             type: 'post',
-            data: {Username:"CUILIJIAy", Password:"CUILIJIAy"},
+            data: {},
             dataType: 'json',
-            success: function (data,s1,s2,s3,s4) {
-                alert("response:\n" + "code:" +data.code + "\nres:" +data.res+"\nstatus:" +s1+"\nContent-Type:"+s2.getResponseHeader("Content-Type")+"\nFaygosessionid:"+s2.getResponseHeader("Faygosessionid"));
-                var sessionID=getCookie('faygosessionID');
-                alert("faygosessionID:" + sessionID);
-                user=getCookie("mytest");
-                alert("mytest:" + user);
+            crossDomain: true,
+            xhrFields: {withCredentials: true},
+            success: function (data, textStatus, request) {
+                alert(data.Code+"!!!"+data.Res.Username);
+                console.log("response:" + data['code']);
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                console.info("error.");
+                if (xhr.status == 200) {
+                    alert(ajaxOptions);
+                }
+                else {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
             }
         });
 
@@ -78,5 +346,57 @@
         }
         return theRequest;
     }
+
+    function login() {
+        $.ajax({
+            url: "http://193.112.18.21:8080/login",
+            type: 'post',
+            data: {Username: "CLJ", Password: "myson"},
+            dataType: 'json',
+            xhrFields: {withCredentials: true},
+            success: function (data, textStatus, request) {
+                console.log("response:" + data['code']);
+                console.log(request.getResponseHeader('Content-Type'));
+                console.log(request.getResponseHeader('Faygosessionid'));
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                console.info("error.");
+                if (xhr.status == 200) {
+                    alert(ajaxOptions);
+                }
+                else {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            }
+        });
+    }
+
+    function logout() {
+        $.ajax({
+            url: "http://193.112.18.21:8080/logout",
+            type: 'post',
+            data: {},
+            dataType: 'json',
+            xhrFields: {withCredentials: true},
+            success: function (data, textStatus, request) {
+                console.log("response:" + data['code']);
+            },
+            error: function(xhr, ajaxOptions, thrownError) {
+                console.info("error.");
+                if (xhr.status == 200) {
+                    alert(ajaxOptions);
+                }
+                else {
+                    alert(xhr.status);
+                    alert(thrownError);
+                }
+            }
+        });
+    }
+
 </script>
+
+<script src="js/selectivity-jquery.js"></script>
+<script src="js/main1.js"></script>
 </html>

@@ -3,21 +3,21 @@ function scoreFun(object,opts){
 	var defaults={
 		fen_d:15.5,  // 每个a的宽度
 		ScoreGrade:10,  // a的个数
-		types:["很不满意",
-		       "差得太离谱，与卖家描述的严重不符，非常不满",
-		       "不满意",
-		       "部分有破损，与卖家描述的不符，不满意",
-		       "一般",
-		       "质量一般",
-		       "没有卖家描述的那么好",
-		       "满意",
-		       "质量不错，与卖家描述的基本一致，还是挺满意的",
-		       "非常满意",
-		       "很差",
-		       "差",
-		       "一般",
-		       "好",
-		       "很好"],
+		types:["",
+		       "",
+		       "",
+		       "",
+		       "",
+		       "",
+		       "",
+		       "",
+		       "",
+		       "",
+		       "11",
+		       "12",
+		       "13",
+		       "14",
+		       "15"],
 		nameScore:"fenshu",
 		parent:"star_score",
 		attitude:"attitude"
@@ -83,6 +83,16 @@ function scoreFun(object,opts){
 };
 
 $(document).ready(function(){
+	scoreFun($("#normalcommentstar1"))
+	scoreFun($("#normalcommentstar2"))
+	scoreFun($("#normalcommentstar3"))
+	scoreFun($("#normalcommentstar4"))
+	scoreFun($("#normalcommentstarx"))
+	scoreFun($("#commentstar1"))
+	scoreFun($("#commentstar2"))
+	scoreFun($("#commentstar3"))
+	scoreFun($("#commentstar4"))
+	scoreFun($("#commentstarx"))
 	scoreFun($("#startone"))
 	scoreFun($("#starttwo"),{
 		fen_d:22,//每一个a的宽度

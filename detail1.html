@@ -11,9 +11,9 @@
 
     <!-- JS before-->
     <script src="js/jquery.min.js"></script>
-    <script src="js/starScore.js"></script>
     <script src="js/JSFunction.js"></script>
     <script src="js/echarts.min.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" >
     <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/star.css" >
 
+    <link rel="stylesheet" type="text/css" media="screen" href="css/selectivity-jquery.css">
     <!-- font -->
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Signika+Negative:400,300,600,700' rel='stylesheet' type='text/css'>
@@ -82,11 +83,110 @@
             <!-- nav-right -->
             <div id="LOGIN_part" class="nav-right">
                 <ul id="test2" class="sign-in">
-                    <li><i class="fa fa-user"></i></li>
-                    <li><a id="login" href="signin.html">登陆 </a></li>
-                    <li id="LandR">|</li>
-                    <li><a id="register" href="signup.html">注册</a></li>
-                    <li><a  href="post.html" class="btn">我要点评</a></li>
+                    <li id="LOGIN_name"><i class="fa fa-user"></i></li>
+
+                    <li><a  href="post.html" class="btn" data-toggle="modal" data-target="#normalModal">我要点评</a></li>
+
+                    <!-- 模态框（Modal） -->
+                    <div class="modal fade" id="normalModal" tabindex="-1" role="dialog" aria-labelledby="normalModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" style="width: 450px;">
+                            <form action="#">
+                                <fieldset>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >
+                                        &times;
+                                    </button>
+                                    <div class="section postdetails">
+                                        <div class="modal-header" style="text-align: center;">
+
+                                            <h3 class="modal-title" id="normalModalLabel" >
+                                                <p style="color: #0a0a0a">请写下你的评论</p>
+                                            </h3>
+                                            <h5><p style="color: rgba(0, 0, 0, 0.49)">描述精确的评论更易得到赞同</p></h5>
+                                        </div>
+                                        <h6></h6>
+                                        <div style="text-align: left">
+                                            <div id="example-4" class="selectivity-input example-input" style=" width:100%;"></div>
+                                        </div>
+                                        <h6></h6>
+                                        <div class="row">
+                                            <label class="col-sm-4 label-title">公司信誉：</label>
+                                            <div class="col-sm-8">
+                                                <div id="normalcommentstar1"  class="block clearfix" >
+                                                    <div class="star_score"></div>
+                                                    <p style="float:left;"><span class="fenshu"></span> 分</p>
+                                                    <div class="attitude"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 label-title">收益回报：</label>
+                                            <div class="col-sm-8">
+                                                <div id="normalcommentstar2"  class="block clearfix" >
+                                                    <div class="star_score"></div>
+                                                    <p style="float:left;"><span class="fenshu"></span> 分</p>
+                                                    <div class="attitude"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 label-title">理赔信誉：</label>
+                                            <div class="col-sm-8">
+                                                <div id="normalcommentstar3"  class="block clearfix" >
+                                                    <div class="star_score"></div>
+                                                    <p style="float:left;"><span class="fenshu"></span> 分</p>
+                                                    <div class="attitude"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 label-title">代理人服务：</label>
+                                            <div class="col-sm-8">
+                                                <div id="normalcommentstar4"  class="block clearfix" >
+                                                    <div class="star_score"></div>
+                                                    <p style="float:left;"><span class="fenshu"></span> 分</p>
+                                                    <div class="attitude"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label class="col-sm-4 label-title">综合评分：</label>
+                                            <div class="col-sm-8">
+                                                <div id="normalcommentstarx"  class="block clearfix" >
+                                                    <div class="star_score"></div>
+                                                    <p style="float:left;"><span class="fenshu"></span> 分</p>
+                                                    <div class="attitude"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row form-group item-description">
+                                            <div class="col-sm-12">
+                                                <textarea class="form-control" id="normaltextarea" placeholder="写下评价内容的详细信息" rows="3"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <!--<div class="row form-group">-->
+                                        <div style="text-align: left">
+                                        <label class="upload-image left" for="upload-image-one">
+                                            <input type="file" id="upload-image" >
+                                        </label>
+                                        </div>
+                                        <!--</div>-->
+                                        <div class="checkbox" style="text-align: left">
+                                            <label><input type="checkbox" name="want">匿名提交</label>
+                                        </div><!-- checkbox -->
+                                        <div class="modal-footer" style="text-align: center;">
+                                            <button type="button" class="btn btn-primary">
+                                                提交
+                                            </button>
+                                        </div>
+                                    </div><!-- postdetails -->
+                                </fieldset>
+                            </form><!-- form -->
+                        </div><!-- /.modal -->
+                    </div>
+                    <!-- 模态框（Modal） -->
+
                 </ul><!-- sign-in -->
             </div>
             <!-- nav-right -->
@@ -104,6 +204,7 @@
             </ol><!-- breadcrumb -->
             <p>&nbsp;</p>
             <h2 class="title">产品详细信息</h2>
+
         </div><!-- breadcrumb -->
 
         <div class="banner-form banner-form-full job-list-form">
@@ -145,19 +246,42 @@
                     </div>
                     <div class="col-sm-8  ">
                         <div class="ad-info">
-                            <span id="detail1_CompanyName"><span id="detail1_ProductName"><a href="#" class="title">  </a></span> | <a href="#">  </a></span>
+                            <span id="detail1_CompanyName"><span id="detail1_ProductName"><a href="#" class="title">  </a></span>  <a href="#">  </a></span>
                             <div class="ad-meta">
                                 <ul id="detail1_ProductContent">
-
+                                    <li>
+                                        <div class="content" >
+                                            <ul class="show_number clearfix" >
+                                                <li>
+                                                    <div>
+                                                    <div id="detail1_StardisplayforProfessional"  class="atar_Show" >
+                                                        <!--<p tip="1.5" ></p>-->
+                                                    </div>
+                                                    <span style="font-size: 19px;" > </span>(专家评价)</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="content" >
+                                            <ul class="show_number clearfix" >
+                                                <li>
+                                                    <div>
+                                                        <div id="detail1_StardisplayforUser"  class="atar_Show" >
+                                                            <!--<p tip="1.5" ></p>-->
+                                                        </div>
+                                                        <span style="font-size: 19px;" > </span>(用户评价)</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div><!-- ad-meta -->
                         </div><!-- ad-info -->
                     </div>
                     <div class="col-sm-1 ">
-
                     </div>
                 </div><!-- item-info -->
-
                 <h1></h1>
                 <div class="social-media">
                     <div class="button">
@@ -165,32 +289,103 @@
                         <a href="#" class="btn btn-primary bookmark"><i class="fa fa-bookmark-o" aria-hidden="true"></i>收藏</a>
                         <a href="#" class="btn btn-primary bookmark" data-toggle="modal" data-target="#myModal"><i class="fa fa-comment" aria-hidden="true"></i>评论</a>
                     </div>
+
+
                     <!-- 模态框（Modal） -->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" >
+                        <div class="modal-dialog" style="width: 450px;">
+                            <form action="#">
+                                <fieldset>
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" >
                                         &times;
                                     </button>
-                                    <h4 class="modal-title" id="myModalLabel">
-                                        我的点评
-                                    </h4>
-                                </div>
-                                <div class="modal-body">
-                                    未登录
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
-                                    </button>
-                                    <button type="button" class="btn btn-primary" style="height: 34px; ">
-                                        <p style="align-content: center; font-size: 15px;" >提交</p>
-                                    </button>
-                                </div>
-                            </div><!-- /.modal-content -->
+                                    <div class="section postdetails">
+                                        <div class="modal-header" style="text-align: center;">
+
+                                            <h3 class="modal-title" id="myModalLabel" >
+                                                <p style="color: #0a0a0a">请写下你的评论</p>
+                                            </h3>
+                                            <h5><p style="color: rgba(0, 0, 0, 0.49)">描述精确的评论更易得到赞同</p></h5>
+                                        </div>
+                                        <h1></h1>
+                                        <div style="text-align: center;">
+                                            <div class="row">
+                                                <label class="col-sm-4 label-title">公司信誉：</label>
+                                                <div class="col-sm-8">
+                                                    <div id="commentstar1"  class="block clearfix" >
+                                                        <div class="star_score"></div>
+                                                        <p style="float:left;"><span class="fenshu"></span> 分</p>
+                                                        <div class="attitude"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <label class="col-sm-4 label-title">收益回报：</label>
+                                                <div class="col-sm-8">
+                                                    <div id="commentstar2"  class="block clearfix" >
+                                                        <div class="star_score"></div>
+                                                        <p style="float:left;"><span class="fenshu"></span> 分</p>
+                                                        <div class="attitude"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <label class="col-sm-4 label-title">理赔信誉：</label>
+                                                <div class="col-sm-8">
+                                                    <div id="commentstar3"  class="block clearfix" >
+                                                        <div class="star_score"></div>
+                                                        <p style="float:left;"><span class="fenshu"></span> 分</p>
+                                                        <div class="attitude"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <label class="col-sm-4 label-title">代理人服务：</label>
+                                                <div class="col-sm-8">
+                                                    <div id="commentstar4"  class="block clearfix" >
+                                                        <div class="star_score"></div>
+                                                        <p style="float:left;"><span class="fenshu"></span> 分</p>
+                                                        <div class="attitude"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <label class="col-sm-4 label-title">综合评分：</label>
+                                                <div class="col-sm-8">
+                                                    <div id="commentstarx"  class="block clearfix" >
+                                                        <div class="star_score"></div>
+                                                        <p style="float:left;"><span class="fenshu"></span> 分</p>
+                                                        <div class="attitude"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row form-group item-description">
+                                            <div class="col-sm-12">
+                                                <textarea class="form-control" id="textarea" placeholder="写下评价内容的详细信息" rows="3"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <!--<div class="row form-group">-->
+                                        <label class="upload-image left" for="upload-image-one">
+                                            <input type="file" id="upload-image-one" style="float: left;">
+                                        </label>
+                                        <!--</div>-->
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" name="want">匿名提交</label>
+                                        </div><!-- checkbox -->
+                                        <div class="modal-footer" style="text-align: center;">
+                                            <button type="button" class="btn btn-primary">
+                                                提交
+                                            </button>
+                                        </div>
+                                    </div><!-- postdetails -->
+                                </fieldset>
+                            </form><!-- form -->
                         </div><!-- /.modal -->
                     </div>
-                    <!-- 模态框（Modal）end -->
+                    <!-- 模态框（Modal） -->
+
                     <ul class="share-social">
                         <li>分享：</li>
                         <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
@@ -205,7 +400,6 @@
 
             <div class="job-details-info">
                 <div class="row">
-
                     <ul id="Two_Tab" class="nav nav-tabs">
                         <li class="active"><a href="#Value_professor" data-toggle="tab"> 专家评价 </a> </li>
                         <li><a href="#Value_User" data-toggle="tab">用户评价</a></li>
@@ -225,7 +419,7 @@
                                                 <div class="panel-heading">
                                                     <h4 class="panel-title">
                                                         <a data-toggle="collapse" data-parent=""  href="#Level_1">
-                                                            <i class="fa fa-table" aria-hidden="true"></i> <span >投保规则 </span><span style="float: right" id="detail1_PS1">  </span>
+                                                            <i class="fa fa-caret-square-o-down" aria-hidden="true"></i> <span >投保规则 </span><span style="float: right" id="detail1_PS1">  </span>
                                                         </a>
                                                     </h4>
                                                 </div>
@@ -529,6 +723,7 @@
                                                                             <div style="float: right">
                                                                                 <ul class="show_number clearfix">
                                                                                     <li>
+                                                                                        <!--<div id="starx11"></div>-->
                                                                                         <div  class="atar_Show">
                                                                                             <p tip="4.5" ></p>
                                                                                         </div>
@@ -1257,7 +1452,6 @@
     </div>
 </div>
 <!--/End:Preset Style Chooser-->
-
 <!--JS after-->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -1265,5 +1459,11 @@
 <script src="js/main.js"></script>
 <script src="js/CJS_after.js"></script>
 <script src="js/switcher.js"></script>
+
+<script src="js/starScore.js"></script>
+
+
+<script src="js/selectivity-jquery.js"></script>
+<script src="js/main1.js"></script>
 </body>
 </html>

@@ -159,7 +159,7 @@ function PrintProductsListFromProfessional(URL,ProductName,Variety,Applicational
         "       </div>"+
         "       <div class='col-sm-4 col-md-4'  >"+
         "           <div class='ad-info' >"+
-        "               <span><a href='"+URL+"' class='title'>"+ProductName+"</a> @ <a href='#'>"+CompanyName+"</a></span>"+
+        "               <span><a href='"+URL+"' class='title'>"+ProductName+"</a> ( <a href='#'>"+CompanyName+"</a> )</span>"+
         "               <div class='content' >"+
         "                   <ul class='show_number clearfix' >"+
         "                       <li>"+
@@ -257,8 +257,9 @@ $(document).ready(function(){
 function loaddetailpage(textx,detailNO,NO) {
     obj = JSON.parse(textx);
     $("#"+detailNO+"_ProductName").append(obj.ProductsList[NO].ProductName)
-    $("#"+detailNO+"_CompanyName").append(obj.ProductsList[NO].CompanyName)
-
+    $("#"+detailNO+"_CompanyName").append(" ("+obj.ProductsList[NO].CompanyName+")")
+    $("#"+detailNO+"_StardisplayforProfessional").append("<p tip='"+obj.ProductsList[NO].PScore+"' ></p>")
+    $("#"+detailNO+"_StardisplayforUser").append("<p tip='"+obj.ProductsList[NO].UScore+"' ></p>")
     $("#"+detailNO+"_ProductContent").append( " <li><a href='#'><i class='fa fa-key' aria-hidden='true'></i>储蓄型人寿 </a></li>"+
         " <li><a href='#'><i class='fa fa-clock-o' aria-hidden='true'></i>投保年龄："+obj.ProductsList[NO].ApplicationalAge+"</a></li>"+
         " <li><i class='fa fa-money' aria-hidden='true'></i>￥25,000 - ￥35,000</li>")
@@ -485,3 +486,4 @@ $(document).ready(function(){
 
     LoadComparePage(textx,"Compare1",0,"Compare2",1)
 });
+
